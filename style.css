@@ -1,12 +1,81 @@
+body{
+    background-color: black;
+    background-image: url(img/1.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 0px -70px
+}
+
+
 #searchbar {
-    margin-top: 10%;
+    margin-top: 8%;
     margin-left: 30%;
     height: 40px;
     width: 40%;
-    color: gold;
+    color: black;
+    font-size: 150%;
+    background-image: url(img/2.jpg);
 }
 #okbutton {
-margin-left: 0px;
-    height: 47px;
-    width: 47px;
+    height: 3.5vw;
+    width: 5%;
+}
+
+#registertext {
+    margin-left: 35%;
+    width: 30%;
+    font-size: 150%;
+    text-align: center;
+}
+
+.sep5 {
+    margin-top: 5%;
+}
+
+.regbutton {
+    margin-left: 43%;
+    margin-top: 1%;
+    width: 13.7%;
+}
+
+.regtext {
+    margin-left: 43%;
+    background-color: transparent;
+    width: 13.8%;
+}
+
+.reginput{
+    margin-left: 43%;
+    background-color: white;
+}
+#reglink {
+    color: black
+}
+#reglink:hover {
+    color: darkgray;
+}
+
+#reglink:visited {
+    color: black;
+}
+
+#toregister {
+    margin-left: 80%;
+}
+
+#regbutton {
+margin-left: 0%;
+}
+
+#logbutton {
+margin-left: 0%;
+}
+
+#input1 {
+    margin-left: 80%;
+}
+
+#input2 {
+    margin-left: 80%;
+    margin-top: 0.1%;
 }
