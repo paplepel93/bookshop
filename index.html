@@ -7,11 +7,14 @@
     <title>Bookshop</title>
 </head>
 
-<header> <!--
+<header>
+
+    <script type="text/javascript" src="main.js"></script>
+    <!--
 Hier moet een zoekbalkje met ok knop.
 Hier moet een knop om te regristreren (naar een andere page).
 Hier moet een knop om in te loggen
--->
+--><body onload="eventlist()" id="body1">
 
     <div>
         <input type="text" id="input1" placeholder="Username..">
@@ -19,6 +22,28 @@ Hier moet een knop om in te loggen
     <div>
         <input type="text" id="input2" placeholder="Password..">
         <button id="logbutton" type="button">Login</button>
+    </div>
+    <div>
+        <section id="loggedin6">
+            <img src="img/3.jpg" alt="person">
+
+        </section>
+        <section id="loggedin1">
+            You are logged in as //Username
+        </section>
+        <section id="loggedin2">
+            You have bought 5 books.
+        </section>
+        <section id="loggedin3">
+            Click here to view them <!-- hier kan misschien een link naar een pagina met gekochte boeken komen-->
+        </section>
+        <section id="loggedin4">
+            Click here to edit your profile
+        </section>
+        <section id="loggedin5">
+            Not //Username?, <a href="#" id="logout">click</a> here to log out
+        </section>
+
     </div>
     <div>
         <section id="toregister">
@@ -29,10 +54,10 @@ Hier moet een knop om in te loggen
         <input type="text" id="searchbar" placeholder="Search for a book..">
         <button id="okbutton" type="button">OK</button>
     </div>
+
+</body>
 </header>
-
-
-<body id = "body">
+<body id = "body2">
 <section class="sec1">
 <!-- Lijst met boeken -->
 </section>

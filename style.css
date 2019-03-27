@@ -6,6 +6,36 @@ body{
     background-position: 0px -70px
 }
 
+#loggedin1 {
+    display: none;
+    margin-left: 57%;
+    margin-top: -9%;
+}
+#loggedin2 {
+    display: none;
+    margin-left: 57%;
+}
+#loggedin3 {
+    display: none;
+    margin-left: 57%;
+}
+#loggedin4 {
+    display: none;
+    margin-left: 57%;
+}
+#loggedin5 {
+    display: none;
+    margin-left: 57%;
+}
+#loggedin6 {
+    display: none;
+    margin-left: 80%;
+    margin-top: 2%;
+}
+#logintext {
+    background-color: lightskyblue;
+    opacity: 0.5;
+}
 
 #searchbar {
     margin-top: 8%;
@@ -68,7 +98,7 @@ margin-left: 0%;
 }
 
 #logbutton {
-margin-left: 0%;
+margin-left: 80%;
 }
 
 #input1 {
