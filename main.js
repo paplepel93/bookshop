@@ -1,11 +1,17 @@
 function eventlist() {
     document.getElementById("logbutton").addEventListener("click", loggedin);
     document.getElementById("logout").addEventListener("click", loggedout);
-
 }
 
 function loggedin() {
-    window.alert("You logged in");
+    /* saving the login data */
+    var inputname = document.getElementById("input1").value;
+    var inputpas = document.getElementById("input2").value;
+    /* giving feedback about the logging in */
+    window.alert("You logged in as " + inputname);
+    /* change the page accordingly */
+    document.getElementById("loggedin1").textContent += inputname;
+    document.getElementById("username1").textContent += inputname;
     document.getElementById("input1").style.display = "none";
     document.getElementById("input2").style.display = "none";
     document.getElementById("logbutton").style.display = "none";
