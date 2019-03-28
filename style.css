@@ -2,7 +2,7 @@ body{
     background-color: black;
     background-image: url(img/1.jpg);
     background-size: 100%;
-    background-position: 0px -70px
+    background-position: 0px -70px;
 }
 
 .dropdown {
@@ -68,8 +68,13 @@ body{
     background-image: url(img/2.jpg);
 }
 #okbutton {
-    height: 3.5vw;
-    width: 5%;
+    height: 55px;
+    width: 55px;
+    position: absolute;
+    margin-top: 7.6%;
+    margin-left: 1.5%;
+    background-image: url(img/searchicon.jpg);
+
 }
 
 #registertext {
