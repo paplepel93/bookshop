@@ -18,7 +18,7 @@
 </div>
 </body>
     <script type="text/javascript" src="main.js"></script>
-    <body onload="eventlist()" id="body2">
+    <body onload="regeventlist()" id="body2">
     <div class="sep5">
         <section class="regtext">
             Name:
@@ -34,7 +34,7 @@
         </section>
     </div>
     <div>
-        <input type="text" id="inputage" class="reginput" placeholder="DD/MM/YYYY">
+        <input type="date" id="inputage" class="reginput" placeholder="DD/MM/YYYY">
     </div>
 
     <div>
@@ -61,7 +61,7 @@
         </section>
     </div>
     <div>
-        <input type="text" id="inputemail" class="reginput" placeholder="e.g. example@gmail.com..">
+        <input type="email" id="inputemail" class="reginput" placeholder="e.g. example@gmail.com..">
     </div>
 
     <div>
@@ -90,7 +90,18 @@
     <div>
         <input type="password" id="inputpas2" class="reginput" placeholder="*********">
     </div>
-
+    <div>
+        <section class="regtext">
+            Creditcard number
+        </section>
+    </div>
+    <div>
+        <input type="text" id="inputcredit" class="reginput" placeholder="1234567890123456..">
+    </div>
+    <div>
+        <input type="checkbox" id="termscheck" value="checked" class="regcheck">
+        I accept the terms and services.
+    </div>
     <div>
         <button id="regbut" class="regbutton" type="submit"> Submit</button>
 
