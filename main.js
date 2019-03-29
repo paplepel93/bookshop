@@ -47,11 +47,11 @@ function register() {
         succes = 0;
     }
 
-    /* Checks wheter all inputfields are filled in*/
-    var totaluser = [regName, regAge, regAdres, regCountry, regEmail, regUsername, regPas1, regPas2, regCredit];
-    var L = totaluser.length;
+    /* Checks whether all input fields are filled in*/
+    var totalUser = [regName, regAge, regAdres, regCountry, regEmail, regUsername, regPas1, regPas2, regCredit];
+    var L = totalUser.length;
     for (let u = 0; u < L; u++) {
-        if (totaluser[u].toString() === "")
+        if (totalUser[u].toString() === "")
         {
             window.alert("You have not completely filled out the form, Please make sure you have filled in every field");
             u = L;
