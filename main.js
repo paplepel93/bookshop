@@ -55,6 +55,27 @@ function register() {
         succes = 0;
     }
 
+    //checks whether passwords are viable
+    var hasNumb = 0;
+    var hasWhite = 0;
+    var pasLength = regPas1.length;
+    for (let u = 0; u < pasLength; u++) {
+    if (regPas1[u].match(/[0-9]/)){
+        hasNumb = 1;
+    }
+    if (regPas1[u].match(/\s/g)){
+        hasWhite = 1;
+    }
+    }
+    if (hasNumb === 0) {
+        window.alert("Password must have at least one number")
+        succes = 0;
+    }
+    if (hasWhite === 1) {
+        window.alert("Password can not contain a white-space")
+        succes = 0;
+    }
+
     /* checks wheter the two passwords are the same*/
     if (regPas1 !== regPas2) {
         window.alert("Passwords do not match try again");
