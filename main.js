@@ -1,7 +1,33 @@
 function indexEventList() {
     document.getElementById("logbutton").addEventListener("click", loginCheck);
     document.getElementById("logout").addEventListener("click", loggedOut);
-    document.getElementById("okbutton").addEventListener("click", search);
+    document.getElementById("okbutton").addEventListener("click", test);//moet search worden
+     }
+
+function test() {
+    var req = new XMLHttpRequest();
+    req.onreadystatechange = function() {
+        //checken of de aanvraag gelukt is
+        if (this.readyState == 4 && this.status == 200)
+        {
+            window.alert("ja da gaat goed")
+            printBooks(this);
+
+        }
+        else
+        {
+            window.alert("gaat niet helemaal goed, status: " + this.status + " en readystate: " + this.readyState);
+        }
+    };
+    //deze url klopt niet maar geeft wel een 200state terug
+    //req.open("GET", "https://secure.feedbackfruits.com/#groups/96457/contents/462176", true);
+    req.open("GET", "group40@science-vs166/myapp/myapp", true);
+    req.send();
+}
+
+function printBooks(file) {
+    var fileDoc = file.responseXML;
+    window.alert(fileDoc);
 }
 
 function regEventList() {
