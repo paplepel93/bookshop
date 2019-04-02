@@ -1,7 +1,7 @@
 function indexEventList() {
     document.getElementById("logbutton").addEventListener("click", loginCheck);
     document.getElementById("logout").addEventListener("click", loggedOut);
-    document.getElementById("okbutton").addEventListener("click", test);//moet search worden
+    document.getElementById("okbutton").addEventListener("click", search);
      }
 
 function test() {
@@ -49,7 +49,6 @@ function register() {
     var regAdres = document.getElementById("inputadres").value;
     var regCountry = document.getElementById("inputcountry").value;
     var regEmail = document.getElementById("inputemail").value;
-    var regUsername = document.getElementById("inputusername").value;
     var regPas1 = document.getElementById("inputpas1").value;
     var regPas2 = document.getElementById("inputpas2").value;
     var regCredit = document.getElementById("inputcredit").value;
@@ -65,6 +64,8 @@ function register() {
     var hasNumb = 0;
     var hasWhite = 0;
     var pasLength = regPas1.length;
+
+    //for loop cycles through the given password
     for (let u = 0; u < pasLength; u++) {
     if (regPas1[u].match(/[0-9]/)){
         hasNumb = 1;
@@ -74,15 +75,19 @@ function register() {
     }
     }
     if (hasNumb === 0) {
-        window.alert("Password must have at least one number")
+        window.alert("Password must have at least one number");
         succes = 0;
     }
     if (hasWhite === 1) {
-        window.alert("Password can not contain a white-space")
+        window.alert("Password can not contain a white-space");
+        succes = 0;
+    }
+    if (regPas1.length <= 6) {
+        window.alert("Password must consist of a minimum of 6 characters");
         succes = 0;
     }
 
-    /* checks wheter the two passwords are the same*/
+    /* checks whether the two passwords are the same*/
     if (regPas1 !== regPas2) {
         window.alert("Passwords do not match try again");
         document.getElementById("inputpas1").value = "";
@@ -101,7 +106,7 @@ function register() {
     }
 
     /* Checks whether all input fields are filled in*/
-    var totalUser = [regName, regAge, regAdres, regCountry, regEmail, regUsername, regPas1, regPas2, regCredit];
+    var totalUser = [regName, regAge, regAdres, regCountry, regEmail, regPas1, regPas2, regCredit];
     var L = totalUser.length;
     for (let u = 0; u < L; u++) {
         if (totalUser[u].toString() === "")
