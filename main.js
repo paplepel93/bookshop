@@ -31,7 +31,13 @@ function printBooks(file) {
 }
 
 function regEventList() {
-    document.getElementById("regbut").addEventListener("click", register);
+    document.getElementById("regbut").addEventListener("click",
+        function(event){
+            event.preventDefault();
+            if(confirm("Are you sure?")){
+                register();
+            }
+        });
 }
 
 function register() {
