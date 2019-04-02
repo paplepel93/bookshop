@@ -1,7 +1,7 @@
 function indexEventList() {
     document.getElementById("logbutton").addEventListener("click", loginCheck);
     document.getElementById("logout").addEventListener("click", loggedOut);
-    document.getElementById("okbutton").addEventListener("click", test);//moet search worden
+    document.getElementById("okbutton").addEventListener("click", search);
      }
 
 function test() {
