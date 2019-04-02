@@ -10,7 +10,7 @@ function test() {
         //checken of de aanvraag gelukt is
         if (this.readyState == 4 && this.status == 200)
         {
-            window.alert("ja da gaat goed")
+            window.alert("ja da gaat goed");
             printBooks(this);
 
         }
@@ -21,7 +21,7 @@ function test() {
     };
     //deze url klopt niet maar geeft wel een 200state terug
     //req.open("GET", "https://secure.feedbackfruits.com/#groups/96457/contents/462176", true);
-    req.open("GET", "group40@science-vs166/myapp/myapp", true);
+    req.open("GET", "webtech.science.uu.nl/group40/", true);
     req.send();
 }
 
