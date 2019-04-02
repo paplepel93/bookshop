@@ -3,6 +3,7 @@ body{
     background-image: url(img/1.jpg);
     background-size: 100%;
     background-position: 0px -70px;
+    background-repeat: round;
 }
 
 .regcheck {
