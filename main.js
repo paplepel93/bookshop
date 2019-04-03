@@ -93,6 +93,7 @@ function register() {
         if (hasNumb === 0) {
             if (haserror === 0) {
                 window.alert("Please fill in a valid password");
+                document.getElementById("passerr").style.display = "block";
                 haserror = 1;
             }
             succes = 0;
@@ -100,13 +101,15 @@ function register() {
         if (hasWhite === 1) {
             if (haserror === 0) {
                 window.alert("Please fill in a valid password");
+                document.getElementById("passerr").style.display = "block";
                 haserror = 1;
             }
             succes = 0;
         }
         if ((hasUpper === 0)) {
             if (haserror === 0) {
-                window.alert("Please fill in a valid password")
+                window.alert("Please fill in a valid password");
+                document.getElementById("passerr").style.display = "block";
                 haserror = 1;
             }
             succes = 0;
@@ -116,6 +119,7 @@ function register() {
         if (regPas1.length <= 6) {
             if (haserror === 0) {
                 window.alert("Please fill in a valid password");
+                document.getElementById("passerr").style.display = "block";
                 haserror = 1;
             }
             succes = 0;
@@ -136,6 +140,7 @@ function register() {
         if (isNaN(regCredit)) {
             if (haserror === 0) {
                 window.alert("Please fill in a valid creditcard number");
+                document.getElementById("crederr").style.display = "block";
                 haserror = 1;
             }
             succes = 0;
@@ -143,6 +148,7 @@ function register() {
         if (regCredit.length !== 16) {
             if (haserror === 0) {
                 window.alert("Please fill in a valid creditcard number");
+                document.getElementById("crederr").style.display = "block";
                 haserror = 1;
             }
             succes = 0;

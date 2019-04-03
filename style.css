@@ -6,6 +6,16 @@ body {
     background-repeat: no-repeat;
 }
 
+#passerr {
+    display: none;
+    background-color: lightgray;
+}
+
+#crederr {
+    display: none;
+    background-color: lightgray;
+}
+
 .regcheck {
     margin-left: 40%;
     margin-top: 20px;
