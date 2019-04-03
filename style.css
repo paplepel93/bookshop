@@ -2,7 +2,7 @@ body{
     background-color: black;
     background-image: url(img/back2.jpg);
     background-size: 100%;
-    background-position: 0px -70px;
+    background-position: 0 -70px;
     background-repeat: no-repeat;
 
 }
@@ -13,7 +13,7 @@ body{
 }
 
 #inputage {
-    width: 12.7%;
+    width: 30%;
 }
 
 #test {
@@ -36,7 +36,7 @@ body{
     background-color: #f9f9f9;
     border: solid black 1px;
     min-width: 160px;
-    box-shadow: 0px 2px 2px 0px black;
+    box-shadow: 0 2px 2px 0 black;
     padding: 12px 16px;
     z-index: 1;
 }
@@ -91,7 +91,6 @@ body{
     margin-top: 7.6%;
     margin-left: 1.5%;
     background-image: url(img/searchicon.jpg);
-
 }
 
 #registertext {
@@ -112,14 +111,15 @@ body{
 }
 
 .regtext {
-    margin-left: 43%;
+    margin-left: 28%;
     background-color: transparent;
-    width: 13.8%;
+    width: 40%/*13.8%*/;
 }
 
 .reginput{
     margin-left: 43%;
     background-color: white;
+    float: right;
 }
 #reglink {
     color: black
@@ -137,7 +137,7 @@ body{
 }
 
 #regbutton {
-margin-left: 0%;
+margin-left: 0;
 }
 
 #logbutton {

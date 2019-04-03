@@ -5,100 +5,33 @@
 <head>
     <meta charset="UTF-8">
     <title>Bookshop</title>
+    <script type="text/javascript" src="main.js"></script>
 </head>
-
+<body onload="regEventList()" id="body2">
 <header>
 
 <div>
     Return to <a id="reglink" href="index.html">homepage</a>
 </div>
-
+</header>
 <div id="registertext">
     Fill out the form below to make an account and get acces to all the books on the site!
 </div>
+<form class="regtext">
+    <p><label for="inputname" class="sep5">Name: </label><input type="text" id ="inputname" class="reginput" placeholder="e.g. Jack Daniels"></p>
+    <p><label for="inputage">Date of birth:</label><input type="date" id="inputage" class="reginput" placeholder="DD/MM/YYYY"></p>
+    <p><label for="inputadres">Adress: </label><input type="text" id="inputadres" class="reginput" placeholder="e.g. Molenstraat 19.."></p>
+    <p><label for="inputcountry">Country: </label><input type="text" id="inputcountry" class="reginput" placeholder="e.g. Netherlands.."></p>
+    <p><label for="inputemail">Email: </label><input type="email" id="inputemail" class="reginput" placeholder="e.g. example@gmail.com.."></p>
+    <p><label for="inputpas1">Password: </label><input type="password" id="inputpas1" class="reginput" placeholder="*********"></p>
+    <p><label for="inputpas2">Password again: </label><input type="password" id="inputpas2" class="reginput" placeholder="*********"></p>
+    <p><label for="inputcredit">Creditcard number: </label><input type="text" id="inputcredit" class="reginput" placeholder="1234567890123456.."></p>
+    <p><br><label for="termscheck">I accept the terms and services.</label><input type="checkbox" id="termscheck" value="checked" class="regcheck"></p>
+</form>
+<div>
+    <button id="regbut" class="regbutton" type="submit"> Submit</button>
+</div>
 </body>
-    <script type="text/javascript" src="main.js"></script>
-    <body onload="regEventList()" id="body2">
-    <div class="sep5">
-        <section class="regtext">
-            Name:
-        </section>
-    </div>
-    <div>
-        <input type="text" id ="inputname" class="reginput" placeholder="e.g. Jack Daniels">
-    </div>
-
-    <div>
-        <section class="regtext">
-            Date of birth:
-        </section>
-    </div>
-    <div>
-        <input type="date" id="inputage" class="reginput" placeholder="DD/MM/YYYY">
-    </div>
-
-    <div>
-        <section class="regtext">
-            Adress:
-        </section>
-    </div>
-    <div>
-        <input type="text" id="inputadres" class="reginput" placeholder="e.g. Molenstraat 19..">
-    </div>
-
-    <div>
-        <section class="regtext">
-            Country:
-        </section>
-    </div>
-    <div>
-        <input type="text" id="inputcountry" class="reginput" placeholder="e.g. Netherlands..">
-    </div>
-
-    <div>
-        <section class="regtext">
-            Email:
-        </section>
-    </div>
-    <div>
-        <input type="email" id="inputemail" class="reginput" placeholder="e.g. example@gmail.com..">
-    </div>
-
-    <div>
-        <section class="regtext">
-            Password
-        </section>
-    </div>
-    <div>
-        <input type="password" id="inputpas1" class="reginput" placeholder="*********">
-    </div>
-
-    <div>
-        <section class="regtext">
-            Password again
-        </section>
-    </div>
-    <div>
-        <input type="password" id="inputpas2" class="reginput" placeholder="*********">
-    </div>
-    <div>
-        <section class="regtext">
-            Creditcard number
-        </section>
-    </div>
-    <div>
-        <input type="text" id="inputcredit" class="reginput" placeholder="1234567890123456..">
-    </div>
-    <div>
-        <input type="checkbox" id="termscheck" value="checked" class="regcheck">
-        I accept the terms and services.
-    </div>
-    <div>
-        <button id="regbut" class="regbutton" type="submit"> Submit</button>
-
-    </div>
-</body>
-</header>
 </html>
 
 
