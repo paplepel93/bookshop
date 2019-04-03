@@ -1,14 +1,14 @@
 function indexEventList() {
     document.getElementById("logbutton").addEventListener("click", loginCheck);
     document.getElementById("logout").addEventListener("click", loggedOut);
-    document.getElementById("okbutton").addEventListener("click", search);
+    document.getElementById("okbutton").addEventListener("click", test);
      }
 
 function test() {
     var req = new XMLHttpRequest();
     req.onreadystatechange = function() {
         //checken of de aanvraag gelukt is
-        if (this.readyState == 4 && this.status == 200)
+        if (this.readyState == 4  && this.status == 200)
         {
             window.alert("ja da gaat goed");
             printBooks(this);
@@ -21,7 +21,7 @@ function test() {
     };
     //deze url klopt niet maar geeft wel een 200state terug
     //req.open("GET", "https://secure.feedbackfruits.com/#groups/96457/contents/462176", true);
-    req.open("GET", "webtech.science.uu.nl/group40/", true);
+    req.open("GET", "http://webtech.science.uu.nl/group40/index.html", true);
     req.send();
 }
 
