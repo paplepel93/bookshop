@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel ="stylesheet" type="text/css" href="style.css"/>
 
 <head>
     <meta charset="UTF-8">
     <title>Bookshop</title>
-</head>
-
-<header>
-
+    <link rel ="stylesheet" type="text/css" href="style.css"/>
     <script type="text/javascript" src="main.js"></script>
+</head>
+<body onload="indexEventList()" id="body1">
+<header>
     <!--
 Hier moet een zoekbalkje met ok knop.
 Hier moet een knop om te regristreren (naar een andere page).
 Hier moet een knop om in te loggen
---><body onload="indexEventList()" id="body1">
+-->
 
     <div> <!-- deze div is bij onload zichtbaar en wordt hidden na het inloggen-->
         <input type="text" id="input1" placeholder="Email..">
@@ -89,17 +88,17 @@ Hier moet een knop om in te loggen
 
     </div>
 
-</body>
 </header>
-<body id = "body2">
+<div id = "body2">
 
-<section class="sec1">
-<!-- Lijst met boeken -->
-</section>
+    <section class="sec1">
+        <!-- Lijst met boeken -->
+    </section>
 
-<section id="sec2">
-    <!-- knop om meerdere boeken te laten zien -->
-</section>
+    <section id="sec2">
+        <!-- knop om meerdere boeken te laten zien -->
+    </section>
 
+</div>
 </body>
 </html>
