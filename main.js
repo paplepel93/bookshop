@@ -43,7 +43,9 @@ function regEventList() {
 function register() {
     /* Deze functie wordt aangeroepen als iemand op de register knop drukt */
     var succes = 1; //succes determines whter the form was filled correctly and thus whether the registration can be fulfilled
+    var haserror = 0; //haserror checks whether an error has already occured so a user doesnt get multiplee error messages at the time
 
+    //block of values that come from the inputfield
     var regName = document.getElementById("inputname").value;
     var regAge = document.getElementById("inputage").value;
     var regAdres = document.getElementById("inputadres").value;
@@ -55,73 +57,112 @@ function register() {
     var checkbox = document.getElementById("termscheck");
 
 
-    if (checkbox.checked === false) {
-        window.alert("You have not yet accepted our terms of service.");
-        succes = 0;
-    }
-
-    //checks whether passwords are viable
-    var hasNumb = 0;
-    var hasWhite = 0;
-    var pasLength = regPas1.length;
-
-    //for loop cycles through the given password
-    for (let u = 0; u < pasLength; u++) {
-    if (regPas1[u].match(/[0-9]/)){
-        hasNumb = 1;
-    }
-    if (regPas1[u].match(/\s/g)){
-        hasWhite = 1;
-    }
-    }
-    if (hasNumb === 0) {
-        window.alert("Password must have at least one number");
-        succes = 0;
-    }
-    if (hasWhite === 1) {
-        window.alert("Password can not contain a white-space");
-        succes = 0;
-    }
-    if (regPas1.length <= 6) {
-        window.alert("Password must consist of a minimum of 6 characters");
-        succes = 0;
-    }
-
-    /* checks whether the two passwords are the same*/
-    if (regPas1 !== regPas2) {
-        window.alert("Passwords do not match try again");
-        document.getElementById("inputpas1").value = "";
-        document.getElementById("inputpas2").value = "";
-        succes = 0;
-    }
-
-    //checks credit card validity or at least the validity of its format
-    if (isNaN(regCredit)) {
-        window.alert("This is not a valid creditcard number");
-        succes = 0;
-    }
-    if (regCredit.length !== 16) {
-        window.alert("This is not a valid creditcard number");
-        succes = 0;
-    }
-
     /* Checks whether all input fields are filled in*/
     var totalUser = [regName, regAge, regAdres, regCountry, regEmail, regPas1, regPas2, regCredit];
     var L = totalUser.length;
     for (let u = 0; u < L; u++) {
-        if (totalUser[u].toString() === "")
-        {
-            window.alert("You have not completely filled out the form, Please make sure you have filled in every field");
-            u = L;
-            succes = 0;
+        if (totalUser[u].toString() === "") {
+            if (haserror === 0) {
+                window.alert("Something went wrong! are you sure you filled every field in correctly?");
+                u = L;
+                haserror = 1;
+                succes = 0;
+            }
         }
     }
-    //when everything has gone right succes is still 1 and the registration is ready to complete.
-    if (succes === 1) {
-        window.alert("You have been successfully registered");
-        window.location.assign("index.html");
+        //checks whether passwords are viable
+        var hasNumb = 0;
+        var hasWhite = 0;
+        var hasUpper = 0;
+        var pasLength = regPas1.length;
+
+        //for loop cycles through the given password
+        for (let u = 0; u < pasLength; u++) {
+            if (regPas1[u].match(/[0-9]/)) {
+                hasNumb = 1;
+            }
+            if (regPas1[u].match(/\s/g)) {
+                hasWhite = 1;
+            }
+            if (regPas1[u] == regPas1[u].toUpperCase())
+            {
+                hasUpper = 1;
+            }
+        }
+        //end of forloop now we check if numbers or whitespaces have been used.
+        if (hasNumb === 0) {
+            if (haserror === 0) {
+                window.alert("Please fill in a valid password");
+                haserror = 1;
+            }
+            succes = 0;
+        }
+        if (hasWhite === 1) {
+            if (haserror === 0) {
+                window.alert("Please fill in a valid password");
+                haserror = 1;
+            }
+            succes = 0;
+        }
+        if ((hasUpper === 0)) {
+            if (haserror === 0) {
+                window.alert("Please fill in a valid password")
+                haserror = 1;
+            }
+            succes = 0;
+        }
+
+        //password must be at least 6 char
+        if (regPas1.length <= 6) {
+            if (haserror === 0) {
+                window.alert("Please fill in a valid password");
+                haserror = 1;
+            }
+            succes = 0;
+        }
+
+        /* checks whether the two passwords are the same*/
+        if (regPas1 !== regPas2) {
+            if (haserror === 0) {
+                window.alert("Passwords do not match try again");
+                haserror = 1;
+            }
+            document.getElementById("inputpas1").value = "";
+            document.getElementById("inputpas2").value = "";
+            succes = 0;
+        }
+
+        //checks credit card validity or at least the validity of its format
+        if (isNaN(regCredit)) {
+            if (haserror === 0) {
+                window.alert("Please fill in a valid creditcard number");
+                haserror = 1;
+            }
+            succes = 0;
+        }
+        if (regCredit.length !== 16) {
+            if (haserror === 0) {
+                window.alert("Please fill in a valid creditcard number");
+                haserror = 1;
+            }
+            succes = 0;
+        }
+        //checks whether checkbox has been checked
+        if (checkbox.checked === false) {
+            if (haserror === 0) {
+                window.alert("You have not yet accepted our terms of service.");
+                haserror = 1;
+            }
+            succes = 0;
+        }
+        
+        //when everything has gone right succes is still 1 and the registration is ready to complete.
+        if (succes === 1) {
+            window.alert("You have been successfully registered");
+            window.location.assign("index.html");
+        }
     }
-}
+
 
 function search() {
     /* Deze functie wordt aangeroepen als iemand op de zoekknop naast de zoekbar drukt*/
