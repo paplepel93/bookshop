@@ -2,8 +2,10 @@ function indexEventList() {
     document.getElementById("logbutton").addEventListener("click", loginCheck);
     document.getElementById("logout").addEventListener("click", loggedOut);
     document.getElementById("okbutton").addEventListener("click", test);
-    
-     }
+    document.getElementById("drop1").addEventListener("click", changedisplay);
+    document.getElementById("drop2").addEventListener("click", changedisplay);
+    document.getElementById("drop3").addEventListener("click", changedisplay);
+}
 
 function test() {
     var req = new XMLHttpRequest();
@@ -34,6 +36,11 @@ function regEventList() {
                 register();
             }
         });
+
+}
+
+function changedisplay() {
+
 }
 
 function register() {
@@ -66,14 +73,25 @@ function register() {
             }
         }
     }
+        //checks whether a space has been used in the name field implicating that a first and last name has been given.
+        var firstandlast = 0;
+        for (let u = 0; u < regName.length; u++) {
+            if (regName[u] === " ") {
+                firstandlast = 1;
+            }
+        }
+        if (firstandlast === 0) {
+            succes = 0;
+            window.alert("Please fil in a first and last name");
+        }
+
         //checks whether passwords are viable
         var hasNumb = 0;
         var hasWhite = 0;
         var hasUpper = 0;
-        var pasLength = regPas1.length;
 
         //for loop cycles through the given password
-        for (let u = 0; u < pasLength; u++) {
+        for (let u = 0; u < regPas1.length; u++) {
             if (regPas1[u].match(/[0-9]/)) {
                 hasNumb = 1;
             }
