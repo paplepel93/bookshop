@@ -2,7 +2,8 @@ function indexEventList() {
     document.getElementById("logbutton").addEventListener("click", loginCheck);
     document.getElementById("logout").addEventListener("click", loggedOut);
     document.getElementById("okbutton").addEventListener("click", search);
-     }
+    connect();
+}
 
 function test() {
     var req = new XMLHttpRequest();
@@ -170,4 +171,43 @@ function loggedOut() {
     document.getElementById("loggedin4").style.display = "none";
     document.getElementById("loggedin5").style.display = "none";
     document.getElementById("loggedin6").style.display = "none";
+}
+
+/*function showData() {
+    const sqlite3 = require('sqlite3').verbose();
+    let db = new sqlite3.Database('../test.db');
+
+    let sql = 'SELECT DISTINCT name name FROM books ORDER BY name';
+
+    db.all(sql, [], (err, rows) => {
+        if(err){
+            throw err;
+        }
+        rows.forEach((row) => {
+            let contentHolder = document.getElementById('body2');
+            let content = document.createTextNode(row.name);
+            contentHolder.appendChild(content);
+        })
+    });
+}*/
+
+function connect() {
+    let request = new XMLHttpRequest();
+
+    request.onreadystatechange = function() {
+      if(request.readyState === 4){
+          console.log('ready state is 4');
+          if(request.status === 200){
+              console.log(request.response);
+          }
+
+          if(request.status === 404){
+              console.log("File not found!");
+          }
+      }
+    };
+
+    request.open('GET', './test.txt', true);
+    request.responseType = 'text';
+    request.send();
 }
