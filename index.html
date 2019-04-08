@@ -21,7 +21,7 @@ Hier moet een knop om in te loggen
         <button id="logbutton" type="button">Login</button>
     </div>
 
-    <!-- Deze div is bij onload hidden-->
+    <!-- this div is hidden onload-->
     <div>
         <section id="loggedin6">
             <img src="img/3.jpg" alt="person">
@@ -33,7 +33,7 @@ Hier moet een knop om in te loggen
             You have bought <a id="nrbought">X</a> books.
         </section>
         <section id="loggedin3">
-            Click here to view them <!-- hier kan misschien een link naar een pagina met gekochte boeken komen-->
+            Click here to view them
         </section>
         <section id="loggedin4">
             Click here to edit your profile
@@ -42,13 +42,12 @@ Hier moet een knop om in te loggen
             Not <a id="username1"></a>? <a href="#" id="logout">click</a> here to log out
         </section>
     </div>
-    <div> <!-- deze div is bij onload zichtbaar en wordt hidden na het inloggen-->
+    <div> <!-- this div is visible onload and hidden after login-->
         <section id="toregister">
         If you do not have an account you can register <a id="reglink" href="reg.html">here</a>
         </section>
     </div>
 
-    <!-- de div voor de zoekfuncties-->
     <div>
         <section>
         <input type="text" id="searchbar" placeholder="Search for a book title..">
@@ -57,7 +56,7 @@ Hier moet een knop om in te loggen
         <section id="gen"> <!-- Deze sectie heeft de drie dropdowns. Misschien kunnen de knoppen beter gebruikt worden
         voor het laten sorteren van de lijst in plaats van alleen groepen eruit te pikken-->
             <div class="dropdown">
-                <button>Search per genre</button>
+                <button id="genrerange" >Search per genre</button>
                 <div class="dropdown-content">
                     <p>Classic</p>
                     <p>Sci-Fi</p>
@@ -65,7 +64,7 @@ Hier moet een knop om in te loggen
                 </div>
             </div>
             <div class="dropdown">
-                <button>Search per author</button>
+                <button id="authorrange" >Search per author</button>
                 <div class="dropdown-content">
                     <p>Tolkien</p>
                     <p>Rowling</p>
@@ -73,7 +72,7 @@ Hier moet een knop om in te loggen
                 </div>
             </div>
             <div class="dropdown">
-                <button>Search per price range</button>
+                <button id ="pricerange">Search per price range</button>
                 <div class="dropdown-content">
                     <p>0 - 5</p>
                     <p>5 - 10</p>
@@ -83,16 +82,15 @@ Hier moet een knop om in te loggen
                 </div>
             </div>
         </section>
-
-
-
     </div>
 
 </header>
-<div id = "body2">
+<div id = "body2" onload="printBooks()">
 
-    <section class="sec1">
-        <!-- Lijst met boeken -->
+    <section id="deze" class="sec1">
+   <!--hier moeten de boeken -->
+    </section>
+
     </section>
 
     <section id="sec2">

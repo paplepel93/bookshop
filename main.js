@@ -2,6 +2,7 @@ function indexEventList() {
     document.getElementById("logbutton").addEventListener("click", loginCheck);
     document.getElementById("logout").addEventListener("click", loggedOut);
     document.getElementById("okbutton").addEventListener("click", test);
+    
      }
 
 function test() {
@@ -12,24 +13,19 @@ function test() {
         {
             window.alert("ja da gaat goed");
             printBooks(this);
-
         }
         else
         {
-            window.alert("gaat niet helemaal goed, status: " + this.status + " en readystate: " + this.readyState);
+            window.alert("status: " + this.status + " en readystate: " + this.readyState);
         }
     };
-    //deze url klopt niet maar geeft wel een 200state terug
-    //req.open("GET", "https://secure.feedbackfruits.com/#groups/96457/contents/462176", true);
     req.open("GET", "http://webtech.science.uu.nl/group40/index.html", true);
     req.send();
 }
 
-function printBooks(file) {
-    var fileDoc = file.responseXML;
-    window.alert(fileDoc);
+function printBooks(){
+    //where the requested data about the books from the server should have been displayed.
 }
-
 function regEventList() {
     document.getElementById("regbut").addEventListener("click",
         function(event){
@@ -84,7 +80,7 @@ function register() {
             if (regPas1[u].match(/\s/g)) {
                 hasWhite = 1;
             }
-            if (regPas1[u] == regPas1[u].toUpperCase())
+            if (regPas1[u] === regPas1[u].toUpperCase())
             {
                 hasUpper = 1;
             }
@@ -171,7 +167,6 @@ function register() {
 
 
 function search() {
-    /* Deze functie wordt aangeroepen als iemand op de zoekknop naast de zoekbar drukt*/
     var searchTerm = document.getElementById("searchbar").value;
     window.alert("you have searched for: " + searchTerm);
 }
@@ -179,9 +174,9 @@ function search() {
 function loginCheck() {
     var inputName = document.getElementById("input1").value;
     var inputPas = document.getElementById("input2").value;
-    // hier moet er gecheckt worden of inlogegevens al bekend zijn bij de server zoja:
+    // check whether logindata is know in the server, if true:
     loggedIn();
-    //zonee:
+    //if false:
     //window.alert("Logincodes are not correct")
 }
 
@@ -199,6 +194,7 @@ function loggedIn() {
     document.getElementById("toregister").style.display = "none";
     document.getElementById("loggedin1").style.display = "block";
     document.getElementById("loggedin2").style.display = "block";
+    document.getElementById("nrbought").value = "X"; //X should be number of items bought from his logindata
     document.getElementById("loggedin3").style.display = "block";
     document.getElementById("loggedin4").style.display = "block";
     document.getElementById("loggedin5").style.display = "block";
