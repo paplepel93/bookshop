@@ -1,10 +1,21 @@
-body{
+/* this css file takes care of the styling of both the index and the register html pages */
+
+body {
     background-color: black;
     background-image: url(img/back2.jpg);
     background-size: 100%;
     background-position: 0 -70px;
     background-repeat: no-repeat;
+}
 
+#passerr {
+    display: none;
+    background-color: lightgray;
+}
+
+#crederr {
+    display: none;
+    background-color: lightgray;
 }
 
 .regcheck {
@@ -94,7 +105,7 @@ body{
 }
 
 #registertext {
-    margin-left: 35%;
+    margin-left: 34%;
     width: 30%;
     font-size: 150%;
     text-align: center;
