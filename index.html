@@ -1,3 +1,5 @@
+<!-- This html file is the file that makes the home/index page -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,13 +11,8 @@
 </head>
 <body onload="indexEventList()" id="body1">
 <header>
-    <!--
-Hier moet een zoekbalkje met ok knop.
-Hier moet een knop om te regristreren (naar een andere page).
-Hier moet een knop om in te loggen
--->
 
-    <div> <!-- deze div is bij onload zichtbaar en wordt hidden na het inloggen-->
+    <div> <!-- this div is visible onload and becomes hidden after logging in-->
         <input type="text" id="input1" placeholder="Email..">
         <input type="password" id="input2" placeholder="Password..">
         <button id="logbutton" type="button">Login</button>
@@ -53,8 +50,7 @@ Hier moet een knop om in te loggen
         <input type="text" id="searchbar" placeholder="Search for a book title..">
         <button id="okbutton" type="button"></button>
         </section>
-        <section id="gen"> <!-- Deze sectie heeft de drie dropdowns. Misschien kunnen de knoppen beter gebruikt worden
-        voor het laten sorteren van de lijst in plaats van alleen groepen eruit te pikken-->
+        <section id="gen">
             <div class="dropdown">
                 <button id="genrerange" >Search per genre</button>
                 <div id="drop1" class="dropdown-content">
@@ -88,13 +84,9 @@ Hier moet een knop om in te loggen
 <div id = "body2" onload="printBooks()">
 
     <section id="deze" class="sec1">
-   <!--hier moeten de boeken -->
+   <!--this is where the books should be shown -->
     </section>
 
-    </section>
-
-    <section id="sec2">
-        <!-- knop om meerdere boeken te laten zien -->
     </section>
 
 </div>

@@ -1,3 +1,6 @@
+//Main.js is the javascript file that manages the responsive sides of the page. This is where the p[age will be changed on logging in
+//and this is where the register info is processed.
+
 function indexEventList() {
     document.getElementById("logbutton").addEventListener("click", loginCheck);
     document.getElementById("logout").addEventListener("click", loggedOut);
